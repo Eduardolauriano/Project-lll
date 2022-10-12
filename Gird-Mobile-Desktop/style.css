@@ -1,0 +1,338 @@
+:root {
+    --ff-heading: 'Staatliches', cursive;
+    --ff-heading-p: 'Palanquin', sans-serif;
+    --fs-heading: 4rem;  
+    --fs-heading-p: 2rem;
+    --fw-heading: 400;
+  
+    --ff-main: 'Staatliches', cursive;
+    --fs-main: 2rem;
+    --fw-main: 400;
+
+    --fw-footer: 400;
+    --fw-footer-p: 700;
+      
+    font-size: 62.5%;
+    --fs-body: 1.6rem;
+    
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.page{
+    width: 38.4rem;
+    height: auto;
+    margin: auto;
+
+}
+
+header{
+    background: #8E9AAF;
+    height: 27.9rem;
+    text-align: center;
+    
+}
+
+.logo{
+    width: 13.7rem;
+    height: 13.7rem;
+    margin: 3.2rem auto 3.2rem;
+    animation: topdown 3s 500ms backwards;
+}
+
+.logoSecond {
+  display: none;
+}
+
+header h1 {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-heading);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: var (--fw-heading);
+
+    text-shadow:rgb(41, 38, 38) 0.2rem 0.2rem;
+    background: #CBC0D3;
+    height: 4.9rem;
+    color: #FFFFFF;
+    animation: topdown 3s 500ms backwards;
+}
+
+header p {
+  display: none;
+}
+
+main {
+    text-align: center;
+    padding: 1.4rem 3.2rem 6rem;
+    background: #EFF1FF;
+}
+
+main p {
+    font-family: var(--ff-heading-p);
+    max-width: 27.5rem;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    margin-bottom: 6.3rem;
+    animation: scale3d 10s;
+}
+
+
+
+.card, .cardSecond, .card2  {
+    animation: downtop 3s 1.5s backwards;
+    transition-property: transform;
+    transition-duration: 400ms;    
+}
+
+.cardSecond {
+  display: none;
+}
+
+.card h2, .cardSecond h2, .card2 h2{
+    font-family: var(--ff-main);
+    font-size: var(--fs-main);
+    font-weight: var(--fw-main);
+
+    position: absolute;
+    background: #FEEAFA;
+    width: 11.2rem;
+    height: 3.5rem;
+
+    border-radius: 2rem;
+    color: #4A4E69;
+    padding: 3px;
+    margin: 1.6rem 1.6rem 19.9rem 19.2rem;  
+    animation: topdown 3s 1.9s backwards;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card img, .cardSecond img {
+    /*width: 100%;*/
+    border-radius: 2rem;
+    object-fit: cover;
+
+}
+
+.card:hover {
+    transform: scale(1.1);  
+  }
+
+  .footer {
+    display: none;
+  }
+  
+  @media (min-width: 1024px) {
+
+    .page {
+      width: 128rem;
+      height: auto;
+      display: flex;
+      margin: auto;
+      justify-content: center;
+    }
+
+
+    header {
+      width: 37.7rem;
+      height: 72rem;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .logoSecond {
+      display: block;
+      width: 21.4rem;
+      height: 16.7rem;
+      margin: 3.2rem auto 3.2rem;
+      animation: topdown 3s 500ms backwards;
+    }
+
+    header h1 {
+      margin-bottom: 3.2rem;
+    }
+
+    header p {
+      display: block;
+      width: 27.5rem;
+      height: 26.2rem;
+      margin: auto;
+      font-size: 2.4rem;
+      line-height: 2rem;
+      text-align: center;
+      font-weight: var(--fw-heading);
+      color: #FFFFFF;
+    }
+
+    main {
+      padding: 0;
+      display: grid;
+    }
+
+    .text p {
+      display: none;
+    }
+
+    .cardSecond{
+      display: block;
+    }
+
+    .cardSecond:hover {
+      transform: scale(1.1);  
+    }
+
+    .card2:hover {
+      transform: scale(1.1);  
+    }
+
+    .groupCard {
+      display: grid;
+      padding: 64px 81px 0 98px ;
+      grid-template-areas: 
+      "A B"
+      "D B"
+      "D C"
+      "G G"
+      ;
+
+      gap: 3.2rem;
+      margin: 0;                                
+    }
+
+    .groupCard img {
+      width: 22.0rem;
+    }
+
+    .card img {
+      height: 15.0rem;
+    }
+
+    .card2 img {
+      height: 35.0rem;
+    }
+
+    .groupCard div:nth-child(1) {
+      grid-area: A;
+    
+    }
+    
+    .groupCard div:nth-child(2) {
+      grid-area: B;
+
+    }
+  
+    .groupCard div:nth-child(3) {
+      grid-area: C;  
+
+    }
+    
+    .groupCard div:nth-child(4) {
+      grid-area: D;
+
+    }
+
+    .cardSecond {
+      display: none;
+    }
+  
+
+    .groupCard h2 {
+      display: none;
+    }
+
+    .footer {
+      display: block;
+      grid-area: G;
+      margin: auto; 
+      color: #4A4E69;     
+    }
+    
+    .footer p {
+      font-size: 1.4rem;
+      font-weight: var(--fw-footer);
+      line-height: 2.8rem;
+    }
+
+    .footer a {
+      text-decoration: none;
+      font-weight: var(--fw-footer-p);
+    }
+  }
+
+  @media (min-width: 1440px) {
+
+    .cardSecond {
+      display: block;
+    }
+
+    .groupCard {
+      display: grid;
+      padding: 64px 81px 0 98px ;
+      grid-template-areas: 
+      "A B E"
+      "D B F"
+      "D C F"
+      "G G G"
+      ;
+
+      gap: 3.2rem;
+      margin: 0;                                
+    }
+
+    .groupCard div:nth-child(5) {
+      grid-area: E;
+      
+    }
+    
+    .groupCard div:nth-child(6) {
+      grid-area: F;
+      
+    } 
+  }
+
+
+@keyframes topdown {
+    0% {
+      opacity: 0;
+      transform: translateY(-5.0rem);
+    }
+  
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+  }
+  
+  @keyframes downtop {
+    0% {
+      opacity: 0;
+      transform: translateY(3.0rem);
+    }
+  
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scale3d {
+    0%{
+      opacity: 0;
+      transform:scale3d();
+    }
+    100%{
+      opacity: 1;
+      transform: scale3d(1);
+    }
+  }
